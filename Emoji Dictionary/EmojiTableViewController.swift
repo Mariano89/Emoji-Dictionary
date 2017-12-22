@@ -10,11 +10,12 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emojis = ["😀", "💩", "🤢", "😎", "😆", "👻", "🍺", "🥃", "🍻", "🍜", "🏎", "🚔", "🛩", "🇦🇷"]
+//    var emojis = ["😀", "💩", "🤢", "😎", "😆", "👻", "🍺", "🥃", "🍻", "🍜", "🏎", "🚔", "🛩", "🇦🇷"]
+    var emojis : [Emoji] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emojis = createEmojis()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,8 +24,10 @@ class EmojiTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        let emoji = emojis[indexPath.row]
 
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = "\(emoji.icon) - \(emoji.category)"
         
         return cell
     }
@@ -39,7 +42,35 @@ class EmojiTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let emojiDefVC = segue.destination as! EmojiDefinitionViewController
-        emojiDefVC.emoji = sender as! String
+        emojiDefVC.emoji = sender as! Emoji
+    }
+    
+    func createEmojis() -> [Emoji] {
+        let smiley = Emoji()
+        smiley.icon = "😀"
+        smiley.def = "A happy smiling face"
+        smiley.releaseDate = 2010
+        smiley.category = "Faces"
+        
+        let poop = Emoji()
+        poop.icon = "💩"
+        poop.def = "Poopie face"
+        poop.releaseDate = 2010
+        poop.category = "Faces"
+        
+        let coolGuy = Emoji()
+        coolGuy.icon = "😎"
+        coolGuy.def = "Coolest dude"
+        coolGuy.releaseDate = 2010
+        coolGuy.category = "Faces"
+        
+        let beer = Emoji()
+        beer.icon = "🍺"
+        beer.def = "Beer"
+        beer.releaseDate = 2010
+        beer.category = "Beverage"
+        
+        return [smiley, poop, coolGuy, beer]
     }
     
 
