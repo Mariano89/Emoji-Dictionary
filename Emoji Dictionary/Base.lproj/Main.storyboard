@@ -59,6 +59,18 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Racecar Sponsored By Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-Qd-NtL">
                                 <rect key="frame" x="10" y="747" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2013" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-sY-yZr">
+                                <rect key="frame" x="126.66666666666666" y="716" width="121.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-Pu-bPD">
+                                <rect key="frame" x="91.666666666666686" y="685" width="192" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,22 +78,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eIo-sY-yZr" firstAttribute="centerX" secondItem="sub-Fs-mGw" secondAttribute="centerX" id="2kn-jk-P8d"/>
                             <constraint firstItem="Iyg-Qd-NtL" firstAttribute="leading" secondItem="qFL-Wy-hCJ" secondAttribute="leading" constant="10" id="4bQ-eK-vVG"/>
                             <constraint firstItem="c81-5y-2OM" firstAttribute="centerX" secondItem="sub-Fs-mGw" secondAttribute="centerX" id="G9l-hr-tXe"/>
+                            <constraint firstItem="3u8-Pu-bPD" firstAttribute="centerX" secondItem="sub-Fs-mGw" secondAttribute="centerX" id="e5D-9Z-bl1"/>
+                            <constraint firstItem="eIo-sY-yZr" firstAttribute="top" secondItem="3u8-Pu-bPD" secondAttribute="bottom" constant="10" id="jaC-12-8cU"/>
                             <constraint firstItem="c81-5y-2OM" firstAttribute="top" secondItem="qFL-Wy-hCJ" secondAttribute="top" constant="20" id="nah-XY-AoN"/>
                             <constraint firstItem="qFL-Wy-hCJ" firstAttribute="trailing" secondItem="Iyg-Qd-NtL" secondAttribute="trailing" constant="10" id="sfb-Dv-y12"/>
+                            <constraint firstItem="Iyg-Qd-NtL" firstAttribute="top" secondItem="eIo-sY-yZr" secondAttribute="bottom" constant="10" id="ye7-B0-26z"/>
                             <constraint firstItem="qFL-Wy-hCJ" firstAttribute="bottom" secondItem="Iyg-Qd-NtL" secondAttribute="bottom" constant="10" id="ytX-MN-LIR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qFL-Wy-hCJ"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="eIo-sY-yZr" id="e3i-g3-CYY"/>
+                        <outlet property="categoryLabel" destination="3u8-Pu-bPD" id="sl7-9Q-sSy"/>
                         <outlet property="emojiDefinitionLabel" destination="Iyg-Qd-NtL" id="pos-6W-76b"/>
                         <outlet property="emojiLabel" destination="c81-5y-2OM" id="J45-Cf-gK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZG-RW-JYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="137"/>
+            <point key="canvasLocation" x="1792.8" y="136.69950738916256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NLY-wR-4Xu">
