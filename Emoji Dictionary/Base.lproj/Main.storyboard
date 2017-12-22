@@ -75,6 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="qFL-Wy-hCJ"/>
                     </view>
                     <connections>
+                        <outlet property="emojiDefinitionLabel" destination="Iyg-Qd-NtL" id="pos-6W-76b"/>
                         <outlet property="emojiLabel" destination="c81-5y-2OM" id="J45-Cf-gK6"/>
                     </connections>
                 </viewController>
